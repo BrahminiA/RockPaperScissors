@@ -2,12 +2,8 @@ import random
 import tkinter
 stats = []
 def get_winner(call):
-    if random.random() <= (1 / 3):
-        throw = "rock"
-    elif (1 / 3) < random.random() <= (2 / 3):
-        throw = "scissors"
-    else:
-        throw = "paper"
+    
+    throw = random.choice(["rock", "scissors", "paper"])
 
     if (throw == "rock" and call == "paper") or (throw == "paper" and call == "scissors") or (throw == "scissors" and call == "rock"):
         stats.append('W')
